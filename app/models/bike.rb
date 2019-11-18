@@ -2,8 +2,8 @@ class Bike < ApplicationRecord
   belongs_to :user
   has_one_attached :photo
 
-  validates :name, presence: true
-  validates :description, presence: true
+  validates :name, presence: true, allow_blank: false
+  validates :description, presence: true, allow_blank: false
   validates :price_per_hour, presence: true, numericality: { only_integer: true }
 
   validate :has_photo?
