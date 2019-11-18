@@ -4,7 +4,7 @@ class Bike < ApplicationRecord
 
   validates :name, presence: true, allow_blank: false
   validates :description, presence: true, allow_blank: false
-  validates :price_per_hour, presence: true, numericality: { only_integer: true }
+  validates :price_per_hour, presence: true
 
   validate :has_photo?
 
