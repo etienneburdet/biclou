@@ -9,6 +9,8 @@ class Bike < ApplicationRecord
   validate :has_photo?
 
   def has_photo?
-    photo.attached?
+    unless photo.attached?
+      errors.add(:photo, "should be present")
+    end
   end
 end
