@@ -1,6 +1,6 @@
 class RentalsController < ApplicationController
   def index
-    @rentals = Rentals.all
+    @rentals = Rental.all
   end
 
   def new
@@ -19,6 +19,6 @@ class RentalsController < ApplicationController
   private
 
   def rental_params
-    params.require(:resntal).permit(:start_date, :end_date)
+    params.require(:rental).permit(:start_date, :end_date)
   end
 end
