@@ -1,5 +1,5 @@
 class RentalsController < ApplicationController
-  before_action set_bike, only: :create
+  before_action :set_bike, only: :create
 
   def index
     @rentals = Rental.all

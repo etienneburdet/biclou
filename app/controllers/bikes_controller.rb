@@ -1,5 +1,5 @@
 class BikesController < ApplicationController
-  before_action :set_bike, only: [:update, :destroy]
+  before_action :set_bike, only: %i[update destroy]
 
   def index
     @bikes = Bike.all
@@ -34,5 +34,4 @@ class BikesController < ApplicationController
   def set_bike
     @bike = Bike.find(params[:id])
   end
-
 end
