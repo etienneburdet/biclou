@@ -1,5 +1,5 @@
 class BikesController < ApplicationController
-  before_action set_bike only: [:update, :destroy]
+  before_action :set_bike, only: [:update, :destroy]
 
   def index
     @bikes = Bike.all
@@ -25,14 +25,14 @@ class BikesController < ApplicationController
     @bike = Bike.new
   end
 
-end
-
   private
 
-    def bike_params
-      params.require(:bike).permit(:name, :description, :price_per_hour, :available)
-    end
+  def bike_params
+    params.require(:bike).permit(:name, :description, :price_per_hour, :available)
+  end
 
-    def set_bike
-      @bike = Bike.find(params[:id])
-    end
+  def set_bike
+    @bike = Bike.find(params[:id])
+  end
+
+end
