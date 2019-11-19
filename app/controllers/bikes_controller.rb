@@ -2,7 +2,7 @@ class BikesController < ApplicationController
   before_action :set_bike, only: %i[update destroy]
 
   def index
-    @bikes = Bike.all
+    @bikes = policy_scope(Bike).order(created_at: :desc)
   end
 
   def destroy
