@@ -1,11 +1,15 @@
-  <div class="container">
-    <div class="row">
+<div class="container">
 
 <h1>Welcome to Biclou - Here are our bikes!</h1>
 
-<% bikes.each do |bike| %>
-  <%= render "bike_card", bike: bike %>
- <% end %>
-
+<div class="container">
+  <% @bikes.each do |bike| %>
+    <div class="card">
+      <img class="card-image" src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+      <div class="card-content">
+        <h2> <%= bike.name %> </h2>
+        <p id='bike-price'> <%= bike.price_per_hour %> </p>
+      </div>
+    </div>
+  <% end %>
 </div>
-  </div>
