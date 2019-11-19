@@ -1,4 +1,4 @@
-class BikePolicy < ApplicationPolicy
+class RentalPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
       scope.where(user: user)
@@ -16,14 +16,11 @@ class BikePolicy < ApplicationPolicy
       right_user?
     end
 
-    def destroy?
-      right_user?
-    end
-
     private
 
     def right_user?
       record.user == user
     end
   end
+
 end

@@ -1,8 +1,8 @@
 class RentalsController < ApplicationController
-  before_action :set_bike, only: [:create, :new]
+  before_action :set_bike, only: %i[create new]
 
   def index
-    @rentals = Rental.all
+    @rentals = policy_scope(Rental).order(created_at: :desc)
   end
 
   def new
