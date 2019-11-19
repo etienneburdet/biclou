@@ -1,47 +1,26 @@
 <div class="container">
-  <h1 class="main-title">This it the title</h1>
-  <div class="row">
-    <div class="col col-12">
-      <div class="card-rental">
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-        <div class="card-rental-infos">
-          <h2>Product name</h2>
-          <p>Product description with <strong>relevant info</strong> only.</p>
+  <h1 class="main-title">Here your rentals!</h1>
+  <!-- How to add ynamically user name? -->
+  <div class="row justify-content-center">
+    <div class="col col-lg-6">
+      <% @rentals.each do |rental| %>
+        <div class="mycard">
+            <img class="card-image" src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+          <div class="card-content">
+            <div class="card-content-left">
+              <h2><%= rental.bike.name.titleize %></h2>
+              <p><%= rental.start_date.strftime("%B") %>, <%= rental.start_date.strftime("%d") %></p>
+              <p><%= rental.start_date.strftime("%I:%M %p") %></p>
+            </div>
+            <div class="card-content-right">
+              <h2>Toto</h2>
+              <p><%= rental.end_date.strftime("%B") %>, <%= rental.end_date.strftime("%d") %></p>
+              <p><%= rental.end_date.strftime("%I:%M %p") %></p>
+            </div>
+          </div>
         </div>
-      </div>
-        <div class="card-rental">
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-        <div class="card-rental-infos">
-          <h2>Product name</h2>
-          <p>Product description with <strong>relevant info</strong> only.</p>
-        </div>
-      </div>
-        <div class="card-rental">
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-        <div class="card-rental-infos">
-          <h2>Product name</h2>
-          <p>Product description with <strong>relevant info</strong> only.</p>
-        </div>
-      </div>
-        <div class="card-rental">
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-        <div class="card-rental-infos">
-          <h2>Product name</h2>
-          <p>Product description with <strong>relevant info</strong> only.</p>
-        </div>
-      </div>
+      <% end %>
     </div>
   </div>
 </div>
 
-<div class="container">
-  <% @rentals.each do |rental| %>
-    <div class="card-rental">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-      <div class="card-rental-infos">
-         <p><%= rental.start_date %></p> -->
-        <p><%= rental.end_date %></p> -->
-      </div>
-    </div>
-  <% end %>
-</div>

@@ -1,33 +1,87 @@
-.card-rental {
+.mycard {
   overflow: hidden;
   height: 120px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
-  align-items: center;
   margin: 20px;
 }
 
-.card-rental img {
+.card-image {
   height: 100%;
   width: 120px;
-  object-fit: cover;
+  position: relative;
 }
 
-.card-rental h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
+.card-content {
+  height: 100%;
+  width: 100%;
+  border: 10px;
+  border-color: orange;
+  position: relative;
+  background-color: #3E3636;
 }
 
-.card-rental p {
-  font-size: 12px;
-  line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 0;
-  margin-top: 8px;
+// .card-title-left {
+//   justify-content: left;
+//   position: absolute;
+//   top: 10px;
+//   left: 10px;
+// }
+
+.card-content-right {
+  justify-content: left;
+  position: absolute;
+  bottom: 10px;
+  right: 70px;
+  p {
+    margin: 0;
+    color: #F5EDED;
+  }
+  h2 {
+    color: #ef9480;
+  }
 }
 
-.card-rental .card-rental-infos {
-  padding: 16px;
+
+// .card-title-right {
+//   justify-content: left;
+//   position: absolute;
+//   top: 10px;
+//   right: 10px;
+// }
+
+
+.card-content-left {
+  justify-content: left;
+  position: absolute;
+  bottom: 10px;
+  left: 30px;
+  p {
+    margin: 0;
+    color: #F5EDED;
+  }
+  h2 {
+    color: #ef9480;
+  }
 }
+
+
+
+// .card h2 {
+//   font-size: 16px;
+//   font-weight: bold;
+//   margin: 0;
+// }
+
+// .card p {
+//   font-size: 12px;
+//   line-height: 1.4;
+//   opacity: .7;
+//   margin-bottom: 0;
+//   margin-top: 8px;
+// }
+
+// .card .card-infos {
+//   padding: 16px;
+// }
