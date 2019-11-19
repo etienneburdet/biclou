@@ -10,7 +10,7 @@ Bike.destroy_all
 Rental.destroy_all
 
 florence = User.new
-folrence.username = 'Florence'
+florence.username = 'Florence'
 florence.email = 'florence@example.com'
 florence.password = 'valid_password'
 florence.password_confirmation = 'valid_password'
