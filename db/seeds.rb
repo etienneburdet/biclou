@@ -10,18 +10,21 @@ Bike.destroy_all
 Rental.destroy_all
 
 florence = User.new
+folrence.username = 'Florence'
 florence.email = 'florence@example.com'
 florence.password = 'valid_password'
 florence.password_confirmation = 'valid_password'
 florence.save!
 
 raja = User.new
+raja.username = 'Raja'
 raja.email = 'raja@example.com'
 raja.password = 'valid_password'
 raja.password_confirmation = 'valid_password'
 raja.save!
 
 paul = User.new
+paul.username = 'Paul'
 paul.email = 'paul@example.com'
 paul.password = 'valid_password'
 paul.password_confirmation = 'valid_password'
