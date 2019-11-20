@@ -3,6 +3,7 @@ class BikesController < ApplicationController
 
   def index
     @bikes = policy_scope(Bike).order(created_at: :desc)
+
   end
 
   def new
