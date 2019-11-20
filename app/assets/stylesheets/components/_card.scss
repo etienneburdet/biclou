@@ -4,7 +4,8 @@
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
-  margin: 20px;
+  margin: 20px 0px;
+  width: 430px;
 }
 
 .card-image {
@@ -20,6 +21,9 @@
   border-color: orange;
   position: relative;
   background-color: $background;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
 }
 
 // .card-title-left {
@@ -30,10 +34,11 @@
 // }
 
 .card-content-right {
-  justify-content: left;
-  position: absolute;
-  bottom: 10px;
-  right: 70px;
+  justify-content: right;
+  width: 50%;
+  // position: absolute;
+  // bottom: 10px;
+  // right: 30px;
   p {
     margin: 0;
     color: $paragraph;
@@ -54,9 +59,10 @@
 
 .card-content-left {
   justify-content: left;
-  position: absolute;
-  bottom: 10px;
-  left: 30px;
+  width: 50%;
+  // position: absolute;
+  // bottom: 10px;
+  // left: 30px;
   p {
     margin: 0;
     color: $paragraph;
