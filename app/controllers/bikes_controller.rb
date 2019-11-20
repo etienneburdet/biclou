@@ -8,7 +8,7 @@ class BikesController < ApplicationController
   end
 
   def search
-    @search_bike = Bike.all
+    @bikes = Bike.all
     # authorize(Bike.first)
    # @bikes = Bike.where(name: @search_bike.name)
     # @bikes = policy_scope(Bike.where(name: @search_bike.name))

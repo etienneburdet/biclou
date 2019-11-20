@@ -10,5 +10,5 @@ Rails.application.routes.draw do
     resources :rentals, only: [ :new, :create ]
   end
   resources :rentals, only: [ :index ]
-  resources :searches, only: [ :index ]
+  get '/search', to: 'bikes#search', as: :search
 end
