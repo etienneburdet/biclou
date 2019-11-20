@@ -1,3 +1,6 @@
-<% @bikes.each do |bike| %>
-  <%= link_to bike.name, new_bike_rental_path(bike) %>
-<% end %>
+<div class="container">
+  <% @bikes.each do |bike| %>
+    <%= link_to bike.name, new_bike_rental_path(bike) %>
+  <% end %>
+</div>
+
