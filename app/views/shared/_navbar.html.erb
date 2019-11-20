@@ -1,6 +1,6 @@
 <div class="navbar fixed-bottom navbar-expand-sm navbar-light navbar-lewagon">
 
-  <div class="container border-top">
+  <div class="container border-top border-primary">
     <%= link_to root_path, class: "nav-link" do %>
       <i class="fas fa-2x fa-search-location"></i>
     <% end %>
@@ -15,14 +15,12 @@
 
     <% if current_user %>
       <%= link_to destroy_user_session_path, method: :delete, class: "nav-link" do %>
-        <i class="fas fa-2x fa-user"></i>
+        <i class="fas fa-2x fa-sign-out-alt"></i>
       <% end %>
-      <%= current_user.email %>
     <% else %>
       <%= link_to new_user_session_path, class: "nav-link" do %>
         <i class="fas fa-2x fa-user"></i>
       <% end %>
-      <%= "NOT LOGGED IN" %>
     <% end %>
 
   </div>
