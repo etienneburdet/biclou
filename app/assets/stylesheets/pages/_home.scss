@@ -2,7 +2,6 @@
 .search-form-control {
   position: relative;
   text-indent: 5px
-
 }
 
 .search-form-control .btn {
@@ -26,3 +25,26 @@
   text-indent: 5px
 }
 
+.home-container {
+  min-height: calc(100vh - 67px);
+  background-color: $background;
+}
+.top-page {
+  background-color: $background;
+  h2 {
+    padding-top: 40px;
+    color: $paragraph;
+    text-align: center;
+  }
+  h6  {
+    color: $paragraph;
+    padding-bottom: 50px;
+    text-align: center;
+  }
+}
+
+.btn {
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 100%;
+}
