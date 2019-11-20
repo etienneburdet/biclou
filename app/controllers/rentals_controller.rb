@@ -1,5 +1,5 @@
 class RentalsController < ApplicationController
-  before_action :set_bike, only: :create
+  before_action :set_bike, only: [:create, :new]
 
   def index
     @rentals = Rental.all
@@ -13,7 +13,7 @@ class RentalsController < ApplicationController
     @rental = Rental.new(rental_params)
     @rental.bike = @bike
     @rental.save
-    redirect_to rental_path(@rental)
+    redirect_to rentals_path
   end
 
   private
