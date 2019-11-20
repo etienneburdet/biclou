@@ -1,5 +1,5 @@
 <div class="mycard">
-  <img class="card-image" src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+  <%= cl_image_tag rental.bike.photo.key, height: 120, width: 120, crop: :fill %>  
   <div class="card-content">
     <div class="card-content-left">
       <h2><%= rental.bike.name.titleize %></h2>

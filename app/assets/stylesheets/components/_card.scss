@@ -1,8 +1,6 @@
 .mycard {
   overflow: hidden;
   height: 120px;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   margin: 20px 0px;
   width: 430px;
@@ -20,7 +18,7 @@
   border: 10px;
   border-color: orange;
   position: relative;
-  background-color: $background;
+  background-color: $light-background;
   display: flex;
   justify-content: space-between;
   padding: 15px;
