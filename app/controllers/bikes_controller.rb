@@ -1,11 +1,9 @@
 class BikesController < ApplicationController
   before_action :set_bike, only: %i[update destroy]
-  after_action :verify_authorized, except: :search, unless: :skip_pundit?
-
+  skip_before_action :authenticate_user!, only: :search
 
   def index
     @bikes = policy_scope(Bike).order(created_at: :desc)
-
   end
 
   def new
