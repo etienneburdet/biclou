@@ -9,7 +9,6 @@ class BikePolicy < ApplicationPolicy
     right_user?
   end
 
-<<<<<<< HEAD
   def new?
     true
   end
@@ -24,22 +23,6 @@ class BikePolicy < ApplicationPolicy
 
   def destroy?
     right_user?
-=======
-  def create?
-    right_user?
-  end
-
-  def update?
-    right_user?
-  end
-
-  def destroy?
-    right_user?
-  end
-
-  def search?
-    true
->>>>>>> pages-link
   end
 
   private
