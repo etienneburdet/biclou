@@ -13,9 +13,18 @@
       <i class="fas fa-2x fa-shopping-cart"></i>
     <% end %>
 
-    <%= link_to root_path, class: "nav-link" do %>
-      <i class="fas fa-2x fa-user"></i>
+    <% if current_user %>
+      <%= link_to destroy_user_session_path, method: :delete, class: "nav-link" do %>
+        <i class="fas fa-2x fa-user"></i>
+      <% end %>
+      <%= current_user.email %>
+    <% else %>
+      <%= link_to new_user_session_path, class: "nav-link" do %>
+        <i class="fas fa-2x fa-user"></i>
+      <% end %>
+      <%= "NOT LOGGED IN" %>
     <% end %>
+
   </div>
 
 </div>
