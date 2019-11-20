@@ -10,12 +10,12 @@
             <div class="card-content-left">
               <h2><%= rental.bike.name.titleize %></h2>
               <p><%= rental.start_date.strftime("%B") %>, <%= rental.start_date.strftime("%d") %></p>
-              <p><%= rental.start_date.strftime("%I:%M %p") %></p>
+              <p><%= rental.start_date.strftime("%I:%M %P") %></p>
             </div>
             <div class="card-content-right">
               <h2>Toto</h2>
               <p><%= rental.end_date.strftime("%B") %>, <%= rental.end_date.strftime("%d") %></p>
-              <p><%= rental.end_date.strftime("%I:%M %p") %></p>
+              <p><%= rental.end_date.strftime("%I:%M %P") %></p>
             </div>
           </div>
         </div>
