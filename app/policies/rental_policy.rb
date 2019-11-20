@@ -1,4 +1,4 @@
-class BikePolicy < ApplicationPolicy
+class RentalPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
       scope.where(user: user)
