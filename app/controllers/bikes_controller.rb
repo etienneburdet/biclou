@@ -2,7 +2,13 @@ class BikesController < ApplicationController
   before_action :set_bike, only: %i[update destroy]
 
   def index
-    @bikes = Bike.all
+    @bikes = policy_scope(Bike).order(created_at: :desc)
+
+  end
+
+  def new
+    @bike = Bike.new
+    authorize @bike
   end
 
   def destroy
@@ -17,18 +23,20 @@ class BikesController < ApplicationController
 
   def create
     @bike = Bike.new(bike_params)
-    @bike.save
-    redirect_to bikes_path
-  end
+    @bike.user = current_user
 
-  def new
-    @bike = Bike.new
+    authorize @bike
+    if @bike.save
+      redirect_to bikes_path
+    else
+      render :new
+    end
   end
 
   private
 
   def bike_params
-    params.require(:bike).permit(:name, :description, :price_per_hour, :available)
+    params.require(:bike).permit(:name, :description, :price_per_hour, :available, :photo)
   end
 
   def set_bike
