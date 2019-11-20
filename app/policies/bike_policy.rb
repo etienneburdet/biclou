@@ -48,3 +48,4 @@ class BikePolicy < ApplicationPolicy
     record.user == user
   end
 end
+
