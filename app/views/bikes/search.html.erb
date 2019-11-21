@@ -1,14 +1,14 @@
+<nav class="navbar navbar-light bg-primary">
+  <span class="navbar-brand mb-0 h1 text-info mx-auto border-bottom border-info">Choose your ride !</span>
+</nav>
 <div class="container">
-  <h2 class="main-title">Choose your ride !</h2>
   <!-- How to add ynamically user name? -->
-  <div class="row justify-content-center">
-    <div class="col col-lg-6">
-
-    <% @bikes.each do |bike| %>
-      <%= link_to new_bike_rental_path(bike) do %>
-        <%= render 'search_card', bike: bike %>
+    <div class="row justify-content-center pt-small">
+      <div class="col">
+      <% @bikes.each do |bike| %>
+        <%= link_to new_bike_rental_path(bike) do %>
+          <%= render 'search_card', bike: bike %>
+        <% end %>
       <% end %>
-    <% end %>
-
-  </div>
+    </div>
 </div>
