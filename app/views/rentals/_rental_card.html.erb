@@ -1,16 +1,25 @@
-<div class="mycard">
-  <%= cl_image_tag rental.bike.photo.key, height: 120, width: 120, crop: :fill %>  
-  <div class="card-content">
-    <div class="card-content-left">
-      <h2><%= rental.bike.name.titleize %></h2>
-      <p><%= rental.start_date.strftime("%B") %>, <%= rental.start_date.strftime("%d") %></p>
-      <p><%= rental.start_date.strftime("%I:%M %p") %></p>
+<div class="card w-100 bg-secondary">
+  <div class="row justify-content-between align-item-center">
+    <div class="col">
+      <%= cl_image_tag rental.bike.photo.key, height: 120, width: 120, crop: :fill %>
     </div>
-
-    <div class="card-content-right">
-      <h2>Toto</h2>
-      <p><%= rental.end_date.strftime("%B") %>, <%= rental.end_date.strftime("%d") %></p>
-      <p><%= rental.end_date.strftime("%I:%M %p") %></p>
+    <div class="col d-flex flex-column justify-content-between">
+      <h5 class="pt-2"><%= rental.bike.name.titleize %></h5>
+      <div>
+        <p class="small-text">
+          <%= rental.start_date.strftime("%B") %>, <%= rental.start_date.strftime("%d") %>
+          <%= rental.start_date.strftime("%I:%M %p") %>
+        </p>
+      </div>
+    </div>
+    <div class="col d-flex flex-column justify-content-between">
+      <h6 class="pt-2">Active now</h6>
+      <div>
+        <p class="small-text">
+          <%= rental.end_date.strftime("%B") %>, <%= rental.end_date.strftime("%d") %>
+          <%= rental.end_date.strftime("%I:%M %p") %>
+        </p>
+      </div>
     </div>
   </div>
 </div>

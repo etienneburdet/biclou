@@ -1,14 +1,13 @@
-<div class="mycard">
-  <%= cl_image_tag bike.photo.key, height: 120, width: 120, crop: :fill %>
-  <div class="card-content">
-    <div class="card-content-left">
+<div class="card w-100 bg-secondary">
+  <div class="row">
+    <div cla<div class="c"><%= cl_image_tag bike.photo.key, height: 120, width: 120, crop: :fill %></div>, crop: :fill %>
+    </div>
+    <div class="col-3">
       <h3><%= bike.name %></h3>
       <p><%= bike.description %></p>
     </div>
-    <div class="card-content-right">
+    <div class="col">
       <h4><%= bike.price_per_hour %></h4>
     </div>
-
-
   </div>
 </div>
