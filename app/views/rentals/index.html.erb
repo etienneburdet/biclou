@@ -1,11 +1,10 @@
 <nav class="navbar navbar-light bg-primary">
-    <span class="navbar-brand mb-0 h1 text-info mx-auto border-bottom border-info">All my bikes!</span>
+    <span class="navbar-brand mb-0 h1 text-info mx-auto border-bottom border-info">All my rentals!</span>
 </nav>
 <div class="container">
-  <h2 class="main-title">Here are your rentals!</h2>
   <!-- How to add ynamically user name? -->
-  <div class="row justify-content-center">
-    <div class="col col-lg-6">
+  <div class="row justify-content-center pt-small">
+    <div class="col">
       <% @rentals.each do |rental| %>
         <%= render 'rental_card', rental: rental %>
       <% end %>
