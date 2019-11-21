@@ -1,6 +1,7 @@
 <div class="card w-100 bg-secondary">
   <div class="row">
-    <div cla<div class="c"><%= cl_image_tag bike.photo.key, height: 120, width: 120, crop: :fill %></div>, crop: :fill %>
+    <div class="col">
+      <%= cl_image_tag bike.photo.key, height: 120, width: 120, crop: :fill %>
     </div>
     <div class="col">
       <h3><%= bike.name %></h3>
