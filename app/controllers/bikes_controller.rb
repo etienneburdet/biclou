@@ -4,11 +4,7 @@ class BikesController < ApplicationController
 
   def index
     @bikes = policy_scope(Bike).order(created_at: :desc)
-  end
-
-  def new
     @bike = Bike.new
-    authorize @bike
   end
 
   def search
@@ -29,6 +25,7 @@ class BikesController < ApplicationController
   end
 
   def create
+    @bikes = policy_scope(Bike).order(created_at: :desc)
     @bike = Bike.new(bike_params)
     @bike.user = current_user
 
@@ -36,7 +33,7 @@ class BikesController < ApplicationController
     if @bike.save
       redirect_to bikes_path
     else
-      render :new
+      render :index
     end
   end
 
