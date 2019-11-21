@@ -4,11 +4,11 @@
   <div class="row justify-content-center">
     <div class="col col-lg-6">
 
-<% @bikes.each do |bike| %>
-  <%= link_to new_bike_rental_path(bike) do %>
-    <%= render 'search_card', bike: bike %>
-  <% end %>
-<% end %>
+    <% @bikes.each do |bike| %>
+      <%= link_to new_bike_rental_path(bike) do %>
+        <%= render 'search_card', bike: bike %>
+      <% end %>
+    <% end %>
 
   </div>
 </div>
