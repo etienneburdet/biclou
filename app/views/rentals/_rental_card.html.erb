@@ -3,23 +3,11 @@
     <div class="col">
       <%= cl_image_tag rental.bike.photo.key, height: 120, width: 120, crop: :fill %>
     </div>
-    <div class="col d-flex flex-column justify-content-between">
-      <h5 class="pt-2"><%= rental.bike.name.titleize %></h5>
-      <div>
-        <p class="small-text">
-          <%= rental.start_date.strftime("%B") %>, <%= rental.start_date.strftime("%d") %>
-          <%= rental.start_date.strftime("%I:%M %p") %>
-        </p>
-      </div>
-    </div>
-    <div class="col d-flex flex-column justify-content-between">
-      <h6 class="pt-2">Active now</h6>
-      <div>
-        <p class="small-text">
-          <%= rental.end_date.strftime("%B") %>, <%= rental.end_date.strftime("%d") %>
-          <%= rental.end_date.strftime("%I:%M %p") %>
-        </p>
-      </div>
+
+    <div class="card-content-right">
+      <h2>Toto</h2>
+      <p><%= rental.end_date.strftime("%e %b %Y") %></p>
+      <p><%= rental.end_date.strftime("%H:%M") %></p>
     </div>
   </div>
 </div>
