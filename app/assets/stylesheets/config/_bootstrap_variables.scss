@@ -6,15 +6,15 @@
 // General style
 $font-family-sans-serif:  $body-font;
 $headings-font-family:    $headers-font;
-$body-bg:                 $background;
+$body-bg:                 $light-background;
 $font-size-base: 1rem;
 
 // Colors
 $body-color: $paragraph;
-$primary:    $title;
+$primary:    $dark-background;
 $secondary:  $light-background;
 $success:    $green;
-$info:       $yellow;
+$info:       $background;
 $danger:     $red;
 $warning:    $orange;
 

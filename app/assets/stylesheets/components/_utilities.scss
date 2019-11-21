@@ -3,6 +3,24 @@
   // min-height: calc(100vh - 67px);
 }
 
+.pt {
+  padding-top: 30px;
+}
+
+.yellow-border {
+  border: 1px solid $background;
+}
+
+.pt-small {
+  padding-top: 15px;
+}
+
+.mg-cards {
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
 #newbike simple_form_for {
   font-size: 10px;
 }

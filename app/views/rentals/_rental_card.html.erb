@@ -1,10 +1,7 @@
-<div class="mycard">
-  <%= cl_image_tag rental.bike.photo.key, height: 120, width: 120, crop: :fill %>
-  <div class="card-content">
-    <div class="card-content-left">
-      <h2><%= rental.bike.name.titleize %></h2>
-      <p><%= rental.start_date.strftime("%e %b %Y") %></p>
-      <p><%= rental.start_date.strftime("%H:%M") %></p>
+<div class="rentalcard yellow-border mg-cards w-80 bg-secondary">
+  <div class="row justify-content-between align-item-center">
+    <div class="col">
+      <%= cl_image_tag rental.bike.photo.key, height: 120, width: 120, crop: :fill %>
     </div>
 
     <div class="card-content-right">
