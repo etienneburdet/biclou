@@ -1,0 +1,14 @@
+.bottom-line-input {
+  background: transparent;
+  border: none;
+  border-bottom: solid 1px;
+  color: $primary;
+  box-shadow: none;
+  &:focus {
+    background: transparent;
+    border: none;
+    border-bottom: solid 1px;
+    color: $primary;
+    box-shadow: none;
+  }
+}
