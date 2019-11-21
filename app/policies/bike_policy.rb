@@ -9,10 +9,6 @@ class BikePolicy < ApplicationPolicy
     right_user?
   end
 
-  def new?
-    true
-  end
-
   def create?
     true
   end
@@ -31,4 +27,3 @@ class BikePolicy < ApplicationPolicy
     record.user == user
   end
 end
-
