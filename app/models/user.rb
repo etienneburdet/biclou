@@ -5,5 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :bikes, dependent: :destroy
-  has_many :rentals, dependant: :destroy
+  has_many :rentals, dependent: :destroy
 end
