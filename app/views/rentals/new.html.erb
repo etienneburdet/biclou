@@ -1,7 +1,7 @@
-<div class="container">
+<div class="container" id='newbike'>
   <%= simple_form_for [@bike, @rental] do |f| %>
-    <%= f.input :start_date %>
-    <%= f.input :end_date %>
-    <%= f.submit "Book a Bike", class: "btn btn-primary" %>
+    <%= f.input :start_date, as: :string, required: true, input_html: {class: "datePicker"} %>
+    <%= f.input :end_date, as: :string, required: true, input_html: {class: "datePicker"} %>
+    <%= f.submit "Book a Bike", class: "btn btn-primary btn-block" %>
   <% end %>
 </div>
