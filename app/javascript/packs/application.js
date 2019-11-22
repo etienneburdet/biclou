@@ -2,10 +2,9 @@ import "bootstrap";
 
 // import newBikeEvt from '../components/add_bike';
 
-import typed from "../components/dynamic_placeholders.js"
-import { initFlatpickr } from "../components/flatpickr";
+import flatpickr from "../components/flatpickr";
+import { initTyped } from "../components/dynamic_placeholders.js";
 
-
-if(document.querySelector('.datePicker')){
-  initFlatpickr();
+if(document.getElementById('home-search')) {
+  initTyped()
 }
