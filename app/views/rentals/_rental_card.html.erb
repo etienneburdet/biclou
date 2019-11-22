@@ -7,8 +7,8 @@
       <h5 class="pt-2"><%= rental.bike.name.titleize %></h5>
       <div>
        <p class="small-text">
-         <%= rental.start_date.strftime("%B") %>, <%= rental.start_date.strftime("%d") %>
-         <%= rental.start_date.strftime("%I:%M %p") %>
+         <%= rental.start_date.strftime("%e %b %Y") %>
+         <%= rental.start_date.strftime("%H:%M") %>
        </p>
      </div>
     </div>
@@ -16,8 +16,8 @@
      <h6 class="pt-2">Active now</h6>
      <div>
        <p class="small-text">
-         <%= rental.end_date.strftime("%B") %>, <%= rental.end_date.strftime("%d") %>
-         <%= rental.end_date.strftime("%I:%M %p") %>
+         <%= rental.end_date.strftime("%e %b %Y") %>
+         <%= rental.end_date.strftime("%H:%M") %>
        </p>
      </div>
     </div>

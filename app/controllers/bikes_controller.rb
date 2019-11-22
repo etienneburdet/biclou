@@ -8,10 +8,14 @@ class BikesController < ApplicationController
   end
 
   def search
-    @bikes = Bike.all
-    # authorize(Bike.first)
-   # @bikes = Bike.where(name: @search_bike.name)
-    # @bikes = policy_scope(Bike.where(name: @search_bike.name))
+    @bikes = Bike.geocoded
+
+    @markers = @bikes.map do |bike|
+      {
+        lat: bike.latitude,
+        lng: bike.longitude
+      }
+    end
   end
 
   def destroy
