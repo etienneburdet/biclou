@@ -108,20 +108,20 @@ bmx.save!
 rental_1 = Rental.new
 rental_1.bike = vtt
 rental_1.user = florence
-rental_1.start_date = Time.now
-rental_1.end_date = Time.now + 3000
+rental_1.start_date = Time.now + 6000
+rental_1.end_date = Time.now + 100000
 rental_1.save!
 
-rental_2 = Rental.new
-rental_2.bike = citybike
-rental_2.user = florence
-rental_2.start_date = Time.local(2019, 7, 8)
-rental_2.end_date = Time.local(2019, 7, 9)
-rental_2.save!
+# rental_2 = Rental.new
+# rental_2.bike = citybike
+# rental_2.user = florence
+# rental_2.start_date = Time.local(2019, 7, 8)
+# rental_2.end_date = Time.local(2019, 7, 9)
+# rental_2.save!
 
-rental_3 = Rental.new
-rental_3.bike = bmx
-rental_3.user = florence
-rental_3.start_date = Time.local(2008, 8, 8)
-rental_3.end_date = Time.local(2008, 8, 9)
-rental_3.save!
+# rental_3 = Rental.new
+# rental_3.bike = bmx
+# rental_3.user = florence
+# rental_3.start_date = Time.local(2008, 8, 8)
+# rental_3.end_date = Time.local(2008, 8, 9)
+# rental_3.save!
