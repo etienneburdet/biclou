@@ -1,0 +1,6 @@
+function updateToggle(status) {
+  const availableBtn = document.querySelector("[data-bike-id='<%= @bike.id %>']");
+  availableBtn.checked = status;
+}
+
+updateToggle(<%=  @bike.available %>);

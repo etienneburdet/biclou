@@ -9,9 +9,6 @@ class BikesController < ApplicationController
 
   def search
     @bikes = Bike.all
-    # authorize(Bike.first)
-   # @bikes = Bike.where(name: @search_bike.name)
-    # @bikes = policy_scope(Bike.where(name: @search_bike.name))
   end
 
   def destroy
@@ -23,7 +20,11 @@ class BikesController < ApplicationController
     old_status = @bike.available
     @bike.update_column(:available, !old_status)
     authorize @bike
-    redirect_to bikes_path
+
+    respond_to do |format|
+      format.html { redirect_to bikes_path }
+      format.js { render 'bikes/update_availability.js.erb'}
+    end
   end
 
   def create
