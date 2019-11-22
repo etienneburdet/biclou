@@ -28,6 +28,7 @@ paul.password_confirmation = 'valid_password'
 paul.save!
 
 bolide = Bike.new
+bolide.address = "22 Boulevard de Reuilly, Paris"
 bolide.name = "bolide"
 bolide.description = "un bon vélo de course"
 bolide.price_per_hour = 10
@@ -38,6 +39,7 @@ bolide.photo.attach(io: file, filename: 'some-image.jpg', content_type: 'image/j
 bolide.save!
 
 vtt = Bike.new
+vtt.address = "Place de la République, Paris"
 vtt.name = "vtt"
 vtt.description = "vélo tout terrain"
 vtt.price_per_hour = 10
@@ -48,6 +50,7 @@ vtt.available = false
 vtt.save!
 
 citybike = Bike.new
+citybike.address = "16 villa Gaudelet, Paris"
 citybike.name = "citybike"
 citybike.description = "for cruising the city"
 citybike.price_per_hour = 10
@@ -58,6 +61,7 @@ citybike.photo.attach(io: file, filename: 'some-image.jpg', content_type: 'image
 citybike.save!
 
 enfant = Bike.new
+enfant.address = "8 Boulevard Charonne, Paris"
 enfant.name = "enfant"
 enfant.description = "Un vélo enfant"
 enfant.price_per_hour = 10
