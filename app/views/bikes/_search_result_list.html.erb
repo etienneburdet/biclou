@@ -1,0 +1,11 @@
+<div class="container bottom-spacer">
+  <div class="row justify-content-center pt-small">
+    <div class="col">
+      <% @bikes.each do |bike| %>
+        <%= link_to new_bike_rental_path(bike) do %>
+          <%= render 'search_card', bike: bike %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
