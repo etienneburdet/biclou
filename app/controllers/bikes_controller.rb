@@ -8,7 +8,7 @@ class BikesController < ApplicationController
   end
 
   def search
-    @bikes = Bike.all
+    @bikes = Bike.where(available: true)
   end
 
   def destroy
