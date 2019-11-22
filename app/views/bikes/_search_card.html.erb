@@ -1,14 +1,14 @@
-<div class="searchcard yellow-border mg-cards w-80 bg-secondary">
+<div class="border border-info m-2 w-80 bg-secondary">
   <div class="row">
     <div class="col">
       <%= cl_image_tag bike.photo.key, height: 120, width: 120, crop: :fill %>
     </div>
     <div class="col">
-      <h3><%= bike.name %></h3>
-      <p><%= bike.description %></p>
+      <h6 class="m-2 text-left"><%= bike.name %></h6>
+      <p class="m-2 small-text"><%= bike.description %></p>
     </div>
     <div class="col">
-      <h4><%= bike.price_per_hour %></h4>
+      <h6 class="m-2 text-right"><%= bike.price_per_hour %>€/h</h6>
     </div>
   </div>
 </div>
