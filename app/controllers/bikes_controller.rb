@@ -8,7 +8,14 @@ class BikesController < ApplicationController
   end
 
   def search
-    @bikes = Bike.where(available: true)
+    @bikes = Bike.geocoded.where(available: true)
+
+    @markers = @bikes.map do |bike|
+      {
+        lat: bike.latitude,
+        lng: bike.longitude
+      }
+    end
   end
 
   def destroy
