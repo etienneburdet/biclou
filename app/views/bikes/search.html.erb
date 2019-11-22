@@ -1,12 +1,11 @@
 <%= render 'shared/top_navbar', title: 'Choose your ride!' %>
-<div class="container bottom-spacer">
-  <!-- How to add ynamically user name? -->
-    <div class="row justify-content-center pt-small">
-      <div class="col">
-      <% @bikes.each do |bike| %>
-        <%= link_to new_bike_rental_path(bike) do %>
-          <%= render 'search_card', bike: bike %>
-        <% end %>
-      <% end %>
-    </div>
+<button id="toggle-button" class="btn btn-primary btn-block" type="button" data-toggle="collapse" data-target=".collapse" aria-expanded="false" aria-controls="multiCollapseExample2">
+  <i class="fas fa-list-ul"></i>
+  Liste des vélos
+</button>
+<div class="collapse">
+  <%= render 'search_result_list' %>
+</div>
+<div class="collapse show">
+  <%= render 'map' %>
 </div>
