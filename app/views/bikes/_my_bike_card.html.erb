@@ -13,7 +13,7 @@
         <%= link_to bike_path(bike), method: :patch, remote: true do %>
           <input
           data-bike-id="<%= bike.id %>"
-          checked="<%= bike.available %>"
+          checked="<%= bike.available.to_s %>"
           type="checkbox"
           class="custom-control-input">
           <label class="custom-control-label" for="customSwitch1">Available</label>
