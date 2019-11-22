@@ -8,7 +8,7 @@ class BikesController < ApplicationController
   end
 
   def search
-    @bikes = Bike.geocoded
+    @bikes = Bike.where(available: true)
 
     @markers = @bikes.map do |bike|
       {
@@ -24,8 +24,14 @@ class BikesController < ApplicationController
   end
 
   def update
-    @bike.update(bike_params)
-    redirect_to bikes_path
+    old_status = @bike.available
+    @bike.update_column(:available, !old_status)
+    authorize @bike
+
+    respond_to do |format|
+      format.html { redirect_to bikes_path }
+      format.js { render 'bikes/update_availability.js.erb'}
+    end
   end
 
   def create
