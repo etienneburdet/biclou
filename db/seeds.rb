@@ -43,7 +43,7 @@ bolide.description = "Great for city rides"
 bolide.price_per_hour = 7
 bolide.address = "22 Boulevard de Reuilly, Paris"
 bolide.user = florence
-bolide.available = false
+bolide.available = true
 file = URI.open("https://images.unsplash.com/photo-1496104570434-e8719f0c1c02?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=944&q=80")
 bolide.photo.attach(io: file, filename: 'some-image.jpg', content_type: 'image/jpg')
 bolide.save!
@@ -56,7 +56,7 @@ vtt.price_per_hour = 10
 vtt.user = raja
 file = URI.open("https://images.unsplash.com/photo-1511994298241-608e28f14fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80")
 vtt.photo.attach(io: file, filename: 'some-image.jpg', content_type: 'image/jpg')
-vtt.available = false
+vtt.available = true
 vtt.save!
 
 citybike = Bike.new
@@ -66,7 +66,7 @@ citybike.price_per_hour = 8
 citybike.address = "16 villa Gaudelet, Paris"
 citybike.price_per_hour = 10
 citybike.user = paul
-citybike.available = false
+citybike.available = true
 file = URI.open("https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80")
 citybike.photo.attach(io: file, filename: 'some-image.jpg', content_type: 'image/jpg')
 citybike.save!
@@ -77,7 +77,7 @@ manbike.description = "Light and fast, 7 gears."
 manbike.address = "22 Boulevard de Reuilly, Paris"
 manbike.price_per_hour = 8
 manbike.user = florence
-manbike.available = false
+manbike.available = true
 file = URI.open("https://images.unsplash.com/photo-1553978458-e039e4a68999?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80")
 manbike.photo.attach(io: file, filename: 'some-image.jpg', content_type: 'image/jpg')
 manbike.save!
@@ -108,20 +108,20 @@ bmx.save!
 rental_1 = Rental.new
 rental_1.bike = vtt
 rental_1.user = florence
-rental_1.start_date = Time.now
-rental_1.end_date = Time.now + 3000
+rental_1.start_date = Time.now + 6000
+rental_1.end_date = Time.now + 9000
 rental_1.save!
 
 rental_2 = Rental.new
 rental_2.bike = citybike
 rental_2.user = florence
-rental_2.start_date = Time.local(2019, 7, 8)
-rental_2.end_date = Time.local(2019, 7, 9)
+rental_2.start_date = Time.local(2020, 7, 8)
+rental_2.end_date = Time.local(2020, 7, 9)
 rental_2.save!
 
 rental_3 = Rental.new
 rental_3.bike = bmx
 rental_3.user = florence
-rental_3.start_date = Time.local(2008, 8, 8)
-rental_3.end_date = Time.local(2008, 8, 9)
+rental_3.start_date = Time.local(2020, 8, 8)
+rental_3.end_date = Time.local(2020, 8, 9)
 rental_3.save!
