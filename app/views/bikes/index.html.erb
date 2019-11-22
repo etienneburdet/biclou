@@ -7,8 +7,8 @@
   </a>
   <div class="collapse w-75 mx-auto" id="collapseAddform">
     <%= simple_form_for @bike  do |f| %>
-      <%= f.input :name, placeholder: 'Beau VTT' %>
-      <%= f.input :description, placeholder: 'Six vitesses, grande taille.'%>
+      <%= f.input :name, placeholder: 'Road Bike, Mountain Bike, Commuting Bike...' %>
+      <%= f.input :description, placeholder: '7 gears, 2kg, ideal for city rides....'%>
       <%= f.input :price_per_hour %>
       <%= f.input :photo, as: :file %>
       <%= f.button :submit, class: 'btn btn-primary btn-block mb-2' %>
