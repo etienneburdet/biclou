@@ -10,8 +10,10 @@
     <div class="col d-flex flex-column justify-content-between py-2">
       <h6><%= bike.price_per_hour %>€/h</h6>
       <div class="custom-control custom-switch">
-        <input type="checkbox" class="custom-control-input">
-        <label class="custom-control-label" for="customSwitch1">Available</label>
+        <%= link_to bike_path(bike), method: :patch do %>
+          <input type="checkbox" class="custom-control-input">
+          <label class="custom-control-label" for="customSwitch1">Available <%= bike.available %></label>
+        <% end %>
       </div>
     </div>
   </div>

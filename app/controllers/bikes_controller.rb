@@ -20,7 +20,9 @@ class BikesController < ApplicationController
   end
 
   def update
-    @bike.update(bike_params)
+    old_status = @bike.available
+    @bike.update_column(:available, !old_status)
+    authorize @bike
     redirect_to bikes_path
   end
 
