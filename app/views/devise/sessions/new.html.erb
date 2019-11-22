@@ -1,6 +1,4 @@
-<nav class="navbar navbar-light bg-primary">
-    <span class="navbar-brand mb-0 h1 text-info mx-auto border-bottom border-info">Log in!</span>
-</nav>
+<%= render 'shared/top_navbar', title: 'Log in' %>
 <div class='root vh-100'>
   <div class="container pt-small">
     <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
